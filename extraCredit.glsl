@@ -1,6 +1,5 @@
 
 void main(){
-
   vec2 v2;
   vec3 v3;
   vec4 v4;
@@ -51,27 +50,23 @@ void main(){
   vec3 dbvv = 1.0 / v3; 
   vec4 dbvvv = 1.0 / v4;
   
-  
-  
   vec2 mm = m2 * v2;
   vec3 mm2 = m3 * v3;
   vec4 mm3 = m4 * v4;
   vec2 mm4 = v2 * m2;
   vec3 mm5 = v3 * m3;
-  vec4 mm6 = v4 * m4;
-  
- 
+  vec4 mm6 = v4 * m4;  
+
   v2 = (v2 = v2);
  
   v2 = (v2 += f);
   v3 = (v3 += f);
   v4 = (v4 += f);
 
-
   m2 = (m2 += f);
   m3 = (m3 += f);
   m4 = (m4 += f);
-
+  
   v2 = (v2 *= m2);
   v3 = (v3 *= m3);
   v4 = (v4 *= m4);
