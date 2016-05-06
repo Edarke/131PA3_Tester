@@ -5,4 +5,4 @@ run "./run.sh"
 Pull requests welcome.
 
 
-Disclaimer: run.sh has not been tested on ieng6  
+This script will not rebuild your project for you.
