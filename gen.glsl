@@ -1,5 +1,3 @@
-int emptyMain();
-
 int emptyMain(){
 }
 
