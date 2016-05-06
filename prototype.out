@@ -1,0 +1,6 @@
+
+*** Error line 12.
+void bar(){}
+         ^
+*** Declaration of 'bar' here conflicts with declaration on line 11
+
