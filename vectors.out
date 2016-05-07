@@ -46,9 +46,3 @@
       ^
 *** Incompatible operands: vec2 = float
 
-
-*** Error line 30.
-    v = v[0];
-      ^
-*** Incompatible operands: vec2 = float
-
