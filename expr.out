@@ -32,5 +32,5 @@
 *** Error line 34.
     int g = f(y);
             ^
-*** Formal type mismatch in function 'f' at pos 0: expected 'int', given 'float'
+*** Formal type mismatch in function 'f' at pos 1: expected 'int', given 'float'
 

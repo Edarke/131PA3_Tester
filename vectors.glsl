@@ -6,7 +6,7 @@ void main(int k){
 	}
 }
 
-void m();
+
 void m(){
 	vec2 v;
 	vec4 y = v.wxyz;
@@ -21,17 +21,17 @@ void m(){
     m.x;
     v = m[0];
 
-    float f = v[0];
+    float f = 1.0; //v[0]; No tested
     f = v.y;
     f = m[1].z;
     f = m[1].x;
 
     v = v.x;
-    v = v[0];
+//    v = v[0]; Not tested
 }
 
 
-void n();
+
 vec4 n(){
     vec2 v;
     return v.xxxx;

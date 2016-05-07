@@ -2,6 +2,8 @@
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
+YELL='\033[0;33m' # bold yellow
+
 NC='\033[0m' # No Color
 
 dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
@@ -11,13 +13,21 @@ cd $dir
 set -o pipefail
 
 for f in *.glsl; do
-
-    printf "Comparing output with %s: \n" ${f%%.*}.out  
-    
-    if  diff -uw <(../glc <$f 2>&1 ) ${f%%.*}.out | sed $colorDiff ; then
-        printf "${GREEN}PASS${NC}\n"
+    if [ "$f" == "extraCredit.glsl" ] && [ "$#" -ne 0 ] ; then
+	    printf "${YELL}Skipping extraCredit.glsl${NC}\n"
+	    continue
     else
-        printf "${RED}FAIL${NC} (${GREEN}+Reference output ${RED}-Your output${NC})\n"    
+     
+        diff -uw <(../glc <$f 2>&1 ) ${f%%.*}.out | sed $colorDiff
+        result=$?
+    	printf "Test case %s: " ${f%%.*}.out 
+ 
+    	
+    	if (exit $result) ; then
+        	printf "${GREEN}PASS${NC}\n"
+   	else
+        	printf "${RED}FAIL${NC} (${GREEN}+Reference output ${RED}-Your output${NC})\n"  
+    	fi
     fi
    
 done

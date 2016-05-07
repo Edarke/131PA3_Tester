@@ -88,9 +88,10 @@ void main()
   m4 = m4 * m4;
   m4 = m4 / m4;
 
-  f = v2[0];
-  f = v3[0];
-  f = v4[0];
+/*Not tested*/
+//  f = v2[0];
+//  f = v3[0];
+//  f = v4[0];
   f = v2.x;
   f = v3.x;
   f = v4.x;
