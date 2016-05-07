@@ -4,9 +4,9 @@ int f(int x) { return (x+1)*2;}
 
 
 void main(int argc, vec2 argv){
-    int x = 5;
-    float y = x + 5;
-    y = x + 5.0;
+    int x = 5; bool b = false;
+    float y = b || b;
+    y = b + 5.0;
     float z = 2;
     y += z - 5.0;
     y *= -z;

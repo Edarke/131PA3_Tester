@@ -1,14 +1,14 @@
 
 *** Error line 8.
-    float y = x + 5;
-                   ^
-*** Wrong initialization of identifier 'y': idType 'float' exprType 'int'
+    float y = b || b;
+                    ^
+*** Wrong initialization of identifier 'y': idType 'float' exprType 'bool'
 
 
 *** Error line 9.
-    y = x + 5.0;
+    y = b + 5.0;
                ^
-*** Incompatible operands: int + float
+*** Incompatible operands: bool + float
 
 
 *** Error line 10.

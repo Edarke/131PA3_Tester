@@ -108,9 +108,9 @@
 
 
 *** Error line 31.
-  f += i;
+  i -= b;
     ^^
-*** Incompatible operands: float += int
+*** Incompatible operands: int -= bool
 
 
 *** Error line 32.

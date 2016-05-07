@@ -1,3 +1,8 @@
+/*
+#version 150   // Uncomment when running through reference compiler.
+precision highp float;
+*/
+
 
 void main(){
   vec2 v2;
@@ -70,4 +75,20 @@ void main(){
   v2 = (v2 *= m2);
   v3 = (v3 *= m3);
   v4 = (v4 *= m4);
+  
+  
+  f = f + i;
+  f = f - i;
+  f = f * i;
+  f = f / i;
+  
+  
+  f = (f  = i);
+  f = (f += i);
+  f = (f -= i);
+  f = (f *= i);
+  f = (f /= i);
 }
+
+
+

@@ -28,7 +28,7 @@ void main(){
   i += v2;
   i += m2;
   i += b;
-  f += i;
+  i -= b;
   f += v2;
   f += m2;
   f += b;
