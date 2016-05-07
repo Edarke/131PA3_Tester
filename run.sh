@@ -20,7 +20,7 @@ for f in *.glsl; do
      
         diff -uw <(../glc <$f 2>&1 ) ${f%%.*}.out | sed $colorDiff
         result=$?
-    	printf "Test case %s: " ${f%%.*}.out 
+    	printf "Test case %s: " ${f%%.*} 
  
     	
     	if (exit $result) ; then
