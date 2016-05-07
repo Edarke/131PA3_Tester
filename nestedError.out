@@ -1,0 +1,30 @@
+
+*** Error line 11.
+					        int x = (i == true) ? 
+                                                                  ^
+*** Incompatible operands: int == bool
+
+
+*** Error line 12.
+						        x + i
+                                                          ^
+*** No declaration found for variable 'x'
+
+
+*** Error line 13.
+						        : v[p++];
+                                                             ^^
+*** No declaration found for variable 'p'
+
+
+*** Error line 15.
+					        switch(s){
+                                                        ^
+*** No declaration found for variable 's'
+
+
+*** Error line 17.
+						        default: return true;
+                                                                 ^^^^^^^^^^^^
+*** Incompatible return: bool given, void expected
+
