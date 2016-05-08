@@ -1,11 +1,24 @@
 void main(){
-  int  i = 5 ? 2 : 1;  // TestNotBoolean
-  bool b = x ? 2 : 1;  // x undeclared & TestNotBoolean & invalid assign
-
-  int  j = b ? 2 : 1;   // valid
-  bool c = b ? 2 : 1;   // invalid assign
+  int i;
   
-  int f = b ? y : 1.0; // y undeclared, invalid assign
-  int g = b ? 1.0 : z; // z undeclared, invalid assign 
+  i = true ? 1 : 2;     // valid  
+  i = true ? 3.0 : 4.0; // invalid assign
+  i = 5 ? 5 : 6;        // Test Not Bool
+  
+  i = NOTDECLARED ? 7 : 8;      // undeclared, test not boolean
+  i = UNDECLARED ? 9.0 : 10.0; // undeclared, test not boolean, invalid assign
+
+  i = true ? YES : false; // YES undeclared
+  i = true ? true: NOPE;  // NOPE undeclared
+
+
+  // Test order
+  bool b = x ? y : z;  // x undeclared, testNotBool, y undeclared, z undeclared;
+ 
+ 
+ 
+  int invalid = b? 1.0 : 2.0; // invalid assign
+
+  int nested = (((b? false: true)? false : true)? true : false)? (b? 1: 2) : (b? 3 : 4);
 }
 

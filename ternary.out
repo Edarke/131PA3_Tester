@@ -1,54 +1,84 @@
 
-*** Error line 2.
-  int  i = 5 ? 2 : 1;  // TestNotBoolean
-           ^
+*** Error line 5.
+  i = true ? 3.0 : 4.0; // invalid assign
+    ^
+*** Incompatible operands: int = float
+
+
+*** Error line 6.
+  i = 5 ? 5 : 6;        // Test Not Bool
+      ^
 *** Test expression must have boolean type
 
 
-*** Error line 3.
-  bool b = x ? 2 : 1;  // x undeclared & TestNotBoolean & invalid assign
+*** Error line 8.
+  i = NOTDECLARED ? 7 : 8;      // undeclared, test not boolean
+                  ^
+*** No declaration found for variable 'NOTDECLARED'
+
+
+*** Error line 8.
+  i = NOTDECLARED ? 7 : 8;      // undeclared, test not boolean
+      ^^^^^^^^^^^
+*** Test expression must have boolean type
+
+
+*** Error line 9.
+  i = UNDECLARED ? 9.0 : 10.0; // undeclared, test not boolean, invalid assign
+                 ^
+*** No declaration found for variable 'UNDECLARED'
+
+
+*** Error line 9.
+  i = UNDECLARED ? 9.0 : 10.0; // undeclared, test not boolean, invalid assign
+      ^^^^^^^^^^
+*** Test expression must have boolean type
+
+
+*** Error line 9.
+  i = UNDECLARED ? 9.0 : 10.0; // undeclared, test not boolean, invalid assign
+    ^
+*** Incompatible operands: int = float
+
+
+*** Error line 11.
+  i = true ? YES : false; // YES undeclared
+                 ^
+*** No declaration found for variable 'YES'
+
+
+*** Error line 12.
+  i = true ? true: NOPE;  // NOPE undeclared
+                       ^
+*** No declaration found for variable 'NOPE'
+
+
+*** Error line 16.
+  bool b = x ? y : z;  // x undeclared, testNotBool, y undeclared, z undeclared;
              ^
 *** No declaration found for variable 'x'
 
 
-*** Error line 3.
-  bool b = x ? 2 : 1;  // x undeclared & TestNotBoolean & invalid assign
+*** Error line 16.
+  bool b = x ? y : z;  // x undeclared, testNotBool, y undeclared, z undeclared;
            ^
 *** Test expression must have boolean type
 
 
-*** Error line 3.
-  bool b = x ? 2 : 1;  // x undeclared & TestNotBoolean & invalid assign
-                    ^
-*** Wrong initialization of identifier 'b': idType 'bool' exprType 'int'
-
-
-*** Error line 6.
-  bool c = b ? 2 : 1;   // invalid assign
-                    ^
-*** Wrong initialization of identifier 'c': idType 'bool' exprType 'int'
-
-
-*** Error line 8.
-  int f = b ? y : 1.0; // y undeclared, invalid assign
-                ^
+*** Error line 16.
+  bool b = x ? y : z;  // x undeclared, testNotBool, y undeclared, z undeclared;
+                 ^
 *** No declaration found for variable 'y'
 
 
-*** Error line 8.
-  int f = b ? y : 1.0; // y undeclared, invalid assign
-                     ^
-*** Wrong initialization of identifier 'f': idType 'int' exprType 'float'
-
-
-*** Error line 9.
-  int g = b ? 1.0 : z; // z undeclared, invalid assign 
-                     ^
+*** Error line 16.
+  bool b = x ? y : z;  // x undeclared, testNotBool, y undeclared, z undeclared;
+                    ^
 *** No declaration found for variable 'z'
 
 
-*** Error line 9.
-  int g = b ? 1.0 : z; // z undeclared, invalid assign 
-                     ^
-*** Wrong initialization of identifier 'g': idType 'int' exprType 'float'
+*** Error line 20.
+  int invalid = b? 1.0 : 2.0; // invalid assign
+                            ^
+*** Wrong initialization of identifier 'invalid': idType 'int' exprType 'float'
 
