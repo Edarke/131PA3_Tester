@@ -36,3 +36,34 @@ vec4 n(){
     vec2 v;
     return v.xxxx;
 }
+
+void valid(){
+  vec2 v2;
+  vec3 v3;
+  vec4 v4;
+
+  float x = v2.x;
+  x = v2.x;
+  x = v2.y;
+
+  x = v3.x;
+  x = v3.y;
+  x = v3.z;
+
+
+  x = v4.x;
+  x = v4.y;
+  x = v4.z;
+  x = v4.w;
+
+  v2 = v2.xx;
+  v2 = v2.yy;
+  v2 = v2.xy;
+  
+  v2 = v3.xz;
+  v2 = v4.ww;
+
+  v4 = v2.xyxy;
+  v3 = v2.yxy;
+  v3 = v4.wzy;
+}
