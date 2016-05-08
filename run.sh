@@ -13,8 +13,8 @@ cd $dir
 set -o pipefail
 
 for f in *.glsl; do
-    if [ "$f" == "extraCredit.glsl" ] && [ "$#" -ne 0 ] ; then
-	    printf "${YELL}Skipping extraCredit.glsl${NC}\n"
+    if [ "${f:0:11}" == "extraCredit" ] && [ "$#" -ne 0 ] ; then
+	    printf "${YELL}Skipping $f${NC}\n"
 	    continue
     else
      
