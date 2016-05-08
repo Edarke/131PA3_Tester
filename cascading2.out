@@ -12,13 +12,13 @@
 
 
 *** Error line 9.
-  m *=  (v + v) * (f - (a++ || ++b));
+  m *=  (v + v) * (f - (c++ || ++d));
                          ^^
-*** No declaration found for variable 'a'
+*** No declaration found for variable 'c'
 
 
 *** Error line 9.
-  m *=  (v + v) * (f - (a++ || ++b));
+  m *=  (v + v) * (f - (c++ || ++d));
                                   ^
-*** No declaration found for variable 'b'
+*** No declaration found for variable 'd'
 

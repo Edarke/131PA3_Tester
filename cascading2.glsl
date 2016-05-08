@@ -6,6 +6,6 @@ void main(){
   bool boolean = ((a++ || ++b) - f) * (v + v);
   
   mat2 m;
-  m *=  (v + v) * (f - (a++ || ++b));
+  m *=  (v + v) * (f - (c++ || ++d));
 
 }
