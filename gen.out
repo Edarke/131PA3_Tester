@@ -31,8 +31,8 @@ int emptyMain(){
 
 *** Error line 19.
 	while(i != j || integer){
-                               ^
-*** Incompatible operands: bool || int
+              ^^^^^^^^^^^^^^^^^
+*** Test expression must have boolean type
 
 
 *** Error line 33.

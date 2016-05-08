@@ -23,6 +23,12 @@ void scopes(int k, float k){
 *** Incompatible operands: vec2 < int
 
 
+*** Error line 4.
+   for(k = 0; k < 5; ++k){
+              ^^^^^
+*** Test expression must have boolean type
+
+
 *** Error line 7.
         while(k)
               ^
