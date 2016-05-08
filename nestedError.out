@@ -1,8 +1,14 @@
 
 *** Error line 11.
-					        int x = (i == true) ? 
-                                                                  ^
+					        float x = (i == true) ? 
+                                                                    ^
 *** Incompatible operands: int == bool
+
+
+*** Error line 11.
+					        float x = (i == true) ? 
+                                                           ^^^^^^^^^
+*** Test expression must have boolean type
 
 
 *** Error line 12.
@@ -12,7 +18,7 @@
 
 
 *** Error line 13.
-						        : v[p++];
+						        : v[p++].x;
                                                              ^^
 *** No declaration found for variable 'p'
 

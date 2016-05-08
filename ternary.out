@@ -1,0 +1,54 @@
+
+*** Error line 2.
+  int  i = 5 ? 2 : 1;  // TestNotBoolean
+           ^
+*** Test expression must have boolean type
+
+
+*** Error line 3.
+  bool b = x ? 2 : 1;  // x undeclared & TestNotBoolean & invalid assign
+             ^
+*** No declaration found for variable 'x'
+
+
+*** Error line 3.
+  bool b = x ? 2 : 1;  // x undeclared & TestNotBoolean & invalid assign
+           ^
+*** Test expression must have boolean type
+
+
+*** Error line 3.
+  bool b = x ? 2 : 1;  // x undeclared & TestNotBoolean & invalid assign
+                    ^
+*** Wrong initialization of identifier 'b': idType 'bool' exprType 'int'
+
+
+*** Error line 6.
+  bool c = b ? 2 : 1;   // invalid assign
+                    ^
+*** Wrong initialization of identifier 'c': idType 'bool' exprType 'int'
+
+
+*** Error line 8.
+  int f = b ? y : 1.0; // y undeclared, invalid assign
+                ^
+*** No declaration found for variable 'y'
+
+
+*** Error line 8.
+  int f = b ? y : 1.0; // y undeclared, invalid assign
+                     ^
+*** Wrong initialization of identifier 'f': idType 'int' exprType 'float'
+
+
+*** Error line 9.
+  int g = b ? 1.0 : z; // z undeclared, invalid assign 
+                     ^
+*** No declaration found for variable 'z'
+
+
+*** Error line 9.
+  int g = b ? 1.0 : z; // z undeclared, invalid assign 
+                     ^
+*** Wrong initialization of identifier 'g': idType 'int' exprType 'float'
+

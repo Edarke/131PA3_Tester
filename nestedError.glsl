@@ -8,9 +8,9 @@ void main(){
 			        switch(i){
 				        case 1: 
 				        {
-					        int x = (i == true) ? 
+					        float x = (i == true) ? 
 						        x + i
-						        : v[p++];
+						        : v[p++].x;
 
 					        switch(s){
 						        case 2: return;
